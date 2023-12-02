@@ -59,7 +59,7 @@ def fieldAtPoint(_r):
     dl = np.array([dlx, dly, dlz])
 
     # Represents the displacement from the source point to the field point
-    sr = r - np.array([lx[i], ly[i], lz[i]])
+    sr = r - np.array([curve_x[i], curve_y[i], curve_z[i]])
     srmag = np.sqrt(sr.dot(sr)) # get the magnitude of the sr vector
 
     # Biot-Savart law, with constants removed
