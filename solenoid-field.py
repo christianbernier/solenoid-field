@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Solenoid parameters
-SOLENOID_HEIGHT = 3
+SOLENOID_HEIGHT = 5
 SOLENOID_COILS = 48
 SOLENOID_RADIUS = 1
 SOLENOID_NUM_POINTS = 1500
@@ -32,7 +32,7 @@ ax.axes.set_zlim3d(bottom=-PLOT_VERT_LIMIT, top=PLOT_VERT_LIMIT)
 # Parametric definition of a solenoid
 def solenoid():
   theta = np.linspace(-2 * SOLENOID_COILS * np.pi, 2 * SOLENOID_COILS * np.pi, SOLENOID_NUM_POINTS)
-  z = np.linspace(- SOLENOID_HEIGHT / 2, SOLENOID_HEIGHT, SOLENOID_NUM_POINTS)
+  z = np.linspace(- SOLENOID_HEIGHT / 2, SOLENOID_HEIGHT / 2, SOLENOID_NUM_POINTS)
   x = SOLENOID_RADIUS * np.cos(theta)
   y = SOLENOID_RADIUS * np.sin(theta)
   return x, y, z
